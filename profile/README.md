@@ -4,21 +4,7 @@ Infrastructure-as-code tooling for the [FABRIC](https://fabric-testbed.net/) nat
 
 ## Ecosystem
 
-```mermaid
-%%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#6366c8', 'primaryTextColor': '#fff', 'primaryBorderColor': '#4a4db0', 'lineColor': '#a5a8e8', 'secondaryColor': '#1e1e2e', 'tertiaryColor': '#2a2a3e'}}}%%
-graph LR
-    classDef iac fill:#6366c8,stroke:#4a4db0,color:#fff,rx:6
-    classDef external fill:#2a2a3e,stroke:#6366c8,color:#a5a8e8,rx:6
-    classDef user fill:#4a4db0,stroke:#4a4db0,color:#fff,rx:6
-
-    U([You]):::user --> TF[HCL Config]:::iac
-    TF -->| pre-built topologies| MOD[terraform-fabric-modules]:::iac
-    MOD --> P[terraform-provider-fabric]:::iac
-    TF -->|slice lifecycle CRUD| P
-    P -->|builds & serializes FIM topology| FIM[fabric-go-fim]:::iac
-    FIM -->|GraphML topology| ORC[fabric-orchestrator-go-client]:::iac
-    ORC -->|REST: submit, poll, delete| CF([FABRIC Control Framework]):::external
-```
+![Ecosystem diagram](./diagram.svg)
 
 ## Repositories
 
