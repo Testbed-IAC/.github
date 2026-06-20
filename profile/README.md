@@ -2,11 +2,11 @@
 
 Infrastructure-as-code tooling for the [FABRIC](https://fabric-testbed.net/) national research testbed. Manage FABRIC slices, nodes, networks, and components declaratively with Terraform.
 
-[terraform-provider-cloudlab](https://github.com/CSC478-WCU/terraform-provider-cloudlab/tree/main) will soon be migrated to this ORG. 
+[terraform-provider-cloudlab](https://github.com/CSC478-WCU/terraform-provider-cloudlab/tree/main) will soon be migrated to this ORG.
 
 ## Ecosystem
 
-![Ecosystem diagram](./diagram.svg)
+![Ecosystem diagram](./diagram.png)
 
 ## Repositories
 
